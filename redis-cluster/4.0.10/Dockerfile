@@ -4,8 +4,8 @@ RUN apk add ruby && \
     gem install -N redis
 
 COPY redis-trib.rb /usr/local/bin/
-
 COPY docker-entrypoint.sh /usr/local/bin/
+
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
